@@ -109,3 +109,41 @@ The background service that manages containers, images, networks, and storage on
 | USER        | Set user and group ID.                                      |
 | VOLUME      | Create volume mounts.                                       |
 | WORKDIR     | Change working directory.                                   |
+
+# Commands
+
+## Common Docker Commands
+
+| Command                                              | Description                                      |
+| ---------------------------------------------------- | ------------------------------------------------ |
+| `docker --version`                                   | Display Docker version information.              |
+| `docker pull <image>`                                | Download an image from Docker Hub or a registry. |
+| `docker push <image>`                                | Upload an image to Docker Hub or a registry.     |
+| `docker build -t <name>:<tag> .`                     | Build a Docker image from a Dockerfile.          |
+| `docker run <image>`                                 | Create and start a container from an image.      |
+| `docker run -d <image>`                              | Run a container in detached mode (background).   |
+| `docker run -p <host_port>:<container_port> <image>` | Map host port to container port.                 |
+| `docker run -e <VAR>=<value> <image>`                | Set environment variables in a container.        |
+| `docker run -v <host_path>:<container_path> <image>` | Mount a volume/directory.                        |
+| `docker ps`                                          | List all running containers.                     |
+| `docker ps -a`                                       | List all containers (running and stopped).       |
+| `docker stop <container_id>`                         | Stop a running container gracefully.             |
+| `docker stop <container_id>`                         | Forcefully stop a running container.             |
+| `docker rm <container_id>`                           | Remove a stopped container.                      |
+| `docker rmi <image_id>`                              | Remove a Docker image.                           |
+| `docker logs <container_id>`                         | Display logs from a container.                   |
+| `docker logs -f <container_id>`                      | Follow container logs in real-time.              |
+| `docker exec -it <container_id> bash`                | Execute a command inside a running container.    |
+| `docker inspect <container_id>`                      | Display detailed information about a container.  |
+| `docker image ls`                                    | List all Docker images.                          |
+| `docker tag <image>:<tag1> <image>:<tag2>`           | Create a new tag for an image.                   |
+| `docker login`                                       | Log in to Docker Hub or a registry.              |
+| `docker logout`                                      | Log out from Docker Hub or a registry.           |
+| `docker network ls`                                  | List all Docker networks.                        |
+| `docker network create <network_name>`               | Create a new Docker network.                     |
+| `docker volume ls`                                   | List all Docker volumes.                         |
+| `docker volume create <volume_name>`                 | Create a new Docker volume.                      |
+| `docker compose up`                                  | Start services defined in docker-compose.yml.    |
+| `docker compose down`                                | Stop and remove services.                        |
+| `docker stats`                                       | Display resource usage statistics of containers. |
+| `docker search <search_term>`                        | Search for images on Docker Hub.                 |
